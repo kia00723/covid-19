@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b048f22d-00bd-4905-8c6d-297defdae23b",
+		"name": "covid-19",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_userall",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"qcbillingtime\" : \"2022-02-20 14:13:16.000000\",\r\n\"lineqc\" : \"C1\",\r\n\"qccustomercode\" : \"CM002\",\r\n\"qccustomername\" : \"ร้านขายยา ปั้งมีคีมสัน\",\r\n\"qcbillnumber\" : \"NV0002\",\r\n\"qcnote\" : \"\",\r\n\"create_date\" : \"2022-02-20 14:13:16.000000\",\r\n\"create_at\" : \"Admin\",\r\n\"modify_date\" : \"2022-02-20 14:13:16.000000\",\r\n\"modify_at\" : \"Admin\",\r\n\"qc_status\" : \"Waitingforqc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4025/get_userall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4025",
+					"path": [
+						"get_userall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_byid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4025/get_user_byid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4025",
+					"path": [
+						"get_user_byid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_userdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"first_name\": \"Natthiti2\",\r\n        \"sur_name\": \"Saengmani2\",\r\n        \"id_card\": \"1500500085458\",\r\n        \"sex\": \"Man\",\r\n        \"birthdate\": \"1997-01-13T20:21:38.000Z\",\r\n        \"telephone_number\": 123456789,\r\n        \"address\": \"208\",\r\n        \"sub_district\": \"asdasd\",\r\n        \"district\": \"asdas\",\r\n        \"province\": \"dasdasd\",\r\n        \"create_date\": \"2022-05-15T20:21:38.000Z\",\r\n        \"create_at\": \"Admin\",\r\n        \"modify_date\": \"2022-05-15T20:21:38.000Z\",\r\n        \"modify_at\": \"Admin\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4025/add_userdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4025",
+					"path": [
+						"add_userdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_userdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {      \r\n        \"id\": 2,\r\n        \"first_name\": \"Natthiti4\",\r\n        \"sur_name\": \"Saengmani4\",\r\n        \"create_date\": \"2022-05-15T20:21:38.000Z\",\r\n        \"create_at\": \"Admin\",\r\n        \"modify_date\": \"2022-05-15T20:21:38.000Z\",\r\n        \"modify_at\": \"Admin\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4025/update_userdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4025",
+					"path": [
+						"update_userdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " dalete_userdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4025/dalete_userdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4025",
+					"path": [
+						"dalete_userdetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
